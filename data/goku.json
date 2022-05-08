@@ -1,0 +1,47 @@
+[
+    {
+        "id": "g0",
+        "name": "Base",
+        "image": "Genki.jpg",
+        "attack": "Genkidama",
+        "power": 9000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+
+    },
+    {
+        "id": "g1",
+        "name": "Kaio Ken",
+        "image": "Kaioken.webp",
+        "attack": "Kaioken x4 Kamehameha",
+        "power": 21000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+
+    },
+    {
+        "id": "g2",
+        "name": "SSJ",
+        "image": "ssj.webp",
+        "attack": "Kamehameha",
+        "power": 150000000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+
+    },
+    {
+        "id": "g3",
+        "name": "SSJ 2",
+        "image": "GokuSSJ2.png",
+        "attack": "Super Kamehameha",
+        "power": 6000000000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+
+    },
+    {
+        "id": "g4",
+        "name": "SSJ 3",
+        "image": "RyuKen2.jpg",
+        "attack": "Ryu Ken",
+        "power": 24000000000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adip"
+
+    }
+]
