@@ -14,6 +14,12 @@ class Layout extends Component {
           <Head>
             <title>Goku day</title>
             <link rel="icon" href="/GokuAvatar.png" />
+            <link
+            rel="preload"
+            href="/fonts/Saiyan-Sans.ttf"
+            as="font"
+            crossOrigin=""
+          />
           </Head>
     
          <Header/>
