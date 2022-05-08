@@ -18,7 +18,6 @@ class Layout extends Component {
             rel="preload"
             href="/fonts/Saiyan-Sans.ttf"
             as="font"
-            crossOrigin=""
           />
           </Head>
     
