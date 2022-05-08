@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({sayanForm}) {
+function Card({sayanForm}: any) {
   return (
     <div className='relative w-[375px] h-[600px] flex flex-col 
         rounded-lg shadow-sm shadow-orange-600 border border-yellow-500 text-white
