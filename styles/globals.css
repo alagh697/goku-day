@@ -36,6 +36,6 @@
   @layer base {
     @font-face {
       font-family: 'Saiyan';
-      src: url('../public/fonts/Saiyan-Sans.ttf') format('truetype');
+      src: url('../public/fonts/Saiyan-Sans.ttf');
     }
   }
