@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Rajdhani'],
-        title: ['Saiyan'],
+        title: ['Bangers'],
       },
     },
   },
