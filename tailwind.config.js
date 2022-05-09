@@ -6,11 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Rajdhani'], title: ['Saiyan']
-      }
+        body: ['Rajdhani'],
+        title: ['Saiyan'],
+      },
     },
   },
-  plugins: [
-    require('tailwindcss-textshadow')
-  ],
+  plugins: [require('tailwindcss-textshadow')],
 }

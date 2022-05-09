@@ -1,44 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
- /* width */
- ::-webkit-scrollbar {
-    width: 0.65rem;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #131314;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #27272E; 
-    border-radius: 1rem;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #a6a6a6;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  } 
-  
-  html{
-    overflow-y: auto;
-    scrollbar-color: #7f7f7f #27272E; /* thumb and track color */
-    scrollbar-width: thin;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 0.65rem;
+}
 
-  @layer base {
-    @font-face {
-      font-family: 'Saiyan';
-      src: url('../public/fonts/Saiyan-Sans.ttf') format('truetype');
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-    }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #131314;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #27272e;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a6a6a6;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+html {
+  overflow-y: auto;
+  scrollbar-color: #7f7f7f #27272e; /* thumb and track color */
+  scrollbar-width: thin;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Saiyan';
+    src: url('../public/fonts/Saiyan-Sans.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
   }
+}

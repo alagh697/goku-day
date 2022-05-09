@@ -5,21 +5,15 @@ import gokuForms from '../data/goku.json'
 
 const Home: NextPage = () => {
   return (
-    
-      <main className="flex w-full flex-1 flex-col space-y-8 items-center justify-center px-5 py-10 text-center">
-        <Banner/>
+    <main className="flex w-full flex-1 flex-col items-center justify-center space-y-8 px-5 py-10 text-center">
+      <Banner />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-       {gokuForms.map((gokuForm) => 
-       <Card key={gokuForm.id} sayanForm={gokuForm}/>
-       )}
-
-        </div>
-
-        
-      </main>
-
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {gokuForms.map((gokuForm) => (
+          <Card key={gokuForm.id} sayanForm={gokuForm} />
+        ))}
+      </div>
+    </main>
   )
 }
 
