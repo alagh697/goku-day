@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react'
 
 function Matrix() {
     // Initialising the canvas
-    const ref = useRef()
+    /*const ref = useRef()
 
 useEffect(() => {
+  
   const canvas = ref.current.getContext('2d')
 
   // Setting the width and height of the canvas
@@ -38,19 +39,19 @@ function draw() {
       drops[i] = 0;
     }
   }
-}
+
 
 // Loop the animation
 setInterval(draw, 100);
 }, [])
-
+*/
 
 
   return (
     <>
-    <canvas ref={ref} className='relative  font-body'>
+   {/*} <canvas ref={ref} className='relative  font-body'>
        <img src="/GokuAvatar.png" alt="" className='z-50 relative'/>     
-</canvas>
+  </canvas>*/}
 </>
   )
 }
