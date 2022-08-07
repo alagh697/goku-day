@@ -30,6 +30,7 @@ html {
   overflow-x: hidden;
   scrollbar-color: #7f7f7f #27272e; /* thumb and track color */
   scrollbar-width: thin;
+  width: 100%;
 }
 
 @layer base {

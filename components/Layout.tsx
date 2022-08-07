@@ -9,7 +9,7 @@ class Layout extends Component {
 
     return (
       <div
-        className="flex min-h-screen w-screen flex-col items-center justify-center overflow-x-hidden 
+        className="flex min-h-screen w-screen flex-col items-center justify-center  
         bg-gradient-to-r from-gray-400 via-gray-100 to-gray-400 font-body"
       >
         <Head>
