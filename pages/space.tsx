@@ -1,15 +1,20 @@
 import * as THREE from 'three';
 import { useRef, useState, useMemo, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Text, Text3D, TrackballControls } from '@react-three/drei'
+import { OrbitControls, Text, Text3D, TrackballControls } from '@react-three/drei'
 import rdKeywords from '../data/seoKeywords.json'
 
 
 
 function Word({ children, ...props }: any) {
     const color = new THREE.Color()
-    const fontProps = { font: '/fonts/Rajdhani-Bold.ttf', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
-    const ref = useRef<any>(null)
+    const fontProps = {
+       font: '/fonts/Rajdhani-Bold.ttf', 
+       fontSize: 2.5, letterSpacing: -0.05, 
+       lineHeight: 2, 
+       'material-toneMapped': false }
+
+    const text = useRef<any>(null)
     const [hovered, setHovered] = useState(false)
     const over = (e:Event) => (e.stopPropagation(), setHovered(true))
     const out = () => setHovered(false)
@@ -21,19 +26,19 @@ function Word({ children, ...props }: any) {
     // Tie component to the render-loop
     useFrame(({ camera, clock }) => {
       // Make text face the camera
-      if(ref.current){
-      ref.current.quaternion.copy(camera.quaternion)
-      ref.current.material.color.lerp(color.set(hovered ? '#ff1414' : 'white'), 0.1)}
+      if(text.current){
+      text.current.quaternion.copy(camera.quaternion)
+      text.current.material.color.lerp(color.set(hovered ? '#ff1414' : 'white'), 0.1)}
       else{
         console.log('error')
       }
       // Animate font color
       
-      //ref.current.rotation.y =  0.0005 
+      //text.current.fad 
     })
     return ( 
     <Text 
-    ref={ref} onPointerOver={over} onPointerOut={out} {...props} {...fontProps} children={children} />
+    ref={text} onPointerOver={over} onPointerOut={out} {...props} {...fontProps} children={children} />
     )
   }
   
@@ -52,7 +57,11 @@ function Word({ children, ...props }: any) {
         }
       return temp
     }, [radius])
-    //useFrame(() => (sphere.current.rotation.y += 0.0002))
+    useFrame((camera) => {
+      //sphere.current.rotation.y += 0.0005
+      //sphere.current.rotation.x += 0.0002
+      
+    })
     return (<mesh ref={sphere}>
       {words.map(([pos, word], index) => <Word key={index} position={pos} children={word} />)}
       </mesh>
@@ -65,11 +74,13 @@ function space() {
   return (
     <div id="canvas-container" 
     className='h-80 bg-black border border-red-600 rounded-xl shadow-sm shadow-red-600'>
-       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 100 }}>
       <fog attach="fog" args={['#202025', 0, 80]} />
       <Cloud radius={22} />
-      <TrackballControls 
-      addEventListener={undefined} hasEventListener={undefined} removeEventListener={undefined} dispatchEvent={undefined} />
+      <OrbitControls autoRotate={true} autoRotateSpeed={1} rotateSpeed={0.2}/>
+      {/*<TrackballControls 
+      addEventListener={undefined} hasEventListener={undefined} 
+  removeEventListener={undefined} dispatchEvent={undefined} />*/}
     </Canvas>
     </div>
   )
